@@ -1,11 +1,18 @@
 matriz1= [
     [1,1,1,1],
     [1,1,1,1],
+    [1,1,1,1],
+    [1,1,1,1],
 
-]
+]                       #[4,5,6,7]
+                        #[2,2,2,2]
+                        #[4,5,6,7]
+                        #[2,2,2,2]
 
 matriz2= [
+    [3,4,5,6],
     [1,1,1,1],
+    [3,4,5,6],
     [1,1,1,1]
 ]
 
@@ -13,13 +20,9 @@ matriz2= [
 
 # deixar matriz só com um array
 ma = []
-for tamanho in range(len(matriz1)):
-    for valores_matriz_one in matriz1: 
-        for valores_matriz_two in matriz2:
-            matriz_new =[]
-            for valores in range(4):
-                new = valores_matriz_one[valores] + valores_matriz_two[valores]
-                matriz_new.append(new)
-            
-        ma.append(matriz_new)
-    print(matriz_new)
+
+for i in range(len(matriz1)):
+    ma.append([])
+    for j in range(len(matriz1[0])):
+        ma[i].append(matriz1[i][j] + matriz2[i][j])
+print(ma)

@@ -1,12 +1,3 @@
-menu = '''                MATRIZES CAL
-
-        [1] SOMA DE MATRIZES
-        [2] SUBTRAÇÃO DE MATRIZES
-        [3] MULTIPLICAÇÃO DE MATRIZES
-        [4] EXIT
-    
-    '''
-
 class calculadora_matrizes: # dimensoes
     def __init__(self,n_linhas,n_colunas,n_linhas_dois,n_colunas_dois):
         self.matriz_one =[]
@@ -38,24 +29,34 @@ class calculadora_matrizes: # dimensoes
         print("deu certo")
         
     def somar_matriz(self):
-        matrizes_soma=[]
-        for tamanho in range(len(self.matriz_one)):
-            for valores1 in self.matriz_one:
-                for valores2 in self.matriz_two:
-                    lista_criada=[]
-                    for valores in range(2):
-                        new = valores1[valores] + valores2[valores]
-                        lista_criada.append(new)
-                matrizes_soma.append(lista_criada)
+        result=[]
+        for i in range(len(self.matriz_one)):
+            result.append([])
+            for j in range(len(self.matriz_one[0])):
+                result[i].append(self.matriz_one[i][j] + self.matriz_two[i][j])
+        print(result)
                 
-        print(matrizes_soma)
 
+menu = '''                MATRIZES CAL
 
+        [1] SOMA DE MATRIZES
+        [2] SUBTRAÇÃO DE MATRIZES
+        [3] MULTIPLICAÇÃO DE MATRIZES
+        [4] EXIT
+    
+    '''
 
-matriz1 = calculadora_matrizes(2,2,2,2)
-matriz1.criar_matriz()
+while True:
+    print(menu)
+    opcao= int(input("digite opção: "))
+    if opcao == 1:
+        print(f"vc escolheu opção soma das matrizes")
+        # ad1,d2,d3,d4 = input("digite as dimensoes: ").split(" ")
+        matriz1 = calculadora_matrizes(2,2,2,2)
+        matriz1.criar_matriz()
+        matriz1.somar_matriz()
+        break
 
-matriz1.somar_matriz()
 
 
 
