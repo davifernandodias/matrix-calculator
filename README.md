@@ -1,2 +1,1 @@
-# matrizes-c-lculos
-fazer calculos de matrizes, multiplicação,soma,subtrações,oposta,transversa
+> `do matrix calculations, multiplication, addition, subtraction, opposite, transversal`
