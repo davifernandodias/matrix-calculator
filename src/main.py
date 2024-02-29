@@ -69,8 +69,8 @@ while True:                 # WHILE PARA DAR INICIO AO MENU E INICIAR COM SISTEM
     opcao= int(input("digite opção: "))
     if opcao == 1:                                         #PRIMEIRA CONDIÇÃO SOMA
         print(f"vc escolheu opção soma das matrizes")
-        ad1,d2,d3,d4 = input("digite as dimensoes: ").split(" ")
-        matriz1 = calculadora_matrizes(int(ad1),int(ad2),int(ad3),int(ad4))
+        # ad1,d2,d3,d4 = input("digite as dimensoes: ").split(" ")
+        matriz1 = calculadora_matrizes(2,2,2,2)
         matriz1.criar_matriz()
         matriz1.somar_matriz()
         char = input('''
@@ -83,8 +83,8 @@ while True:                 # WHILE PARA DAR INICIO AO MENU E INICIAR COM SISTEM
 
     elif opcao == 2:                                         #SEGUNDA CONDIÇÃO SUBTRAÇÃO
         print(f"vc escolheu opção subtrair as matrizes")
-        ad1,d2,d3,d4 = input("digite as dimensoes: ").split(" ")
-        matriz1 = calculadora_matrizes(int(ad1),int(ad2),int(ad3),int(ad4))
+        # ad1,d2,d3,d4 = input("digite as dimensoes: ").split(" ")
+        matriz1 = calculadora_matrizes(2,2,2,2)
         matriz1.criar_matriz()
         matriz1.subtrair_matriz()
         char = input('''
@@ -97,8 +97,8 @@ while True:                 # WHILE PARA DAR INICIO AO MENU E INICIAR COM SISTEM
 
     elif opcao == 3:                                            #TECERICA CONDIÇÃO MULTIPLICAÇÃO
         print(f"vc escolheu opção multiplicar as matrizes")
-        ad1,d2,d3,d4 = input("digite as dimensoes: ").split(" ")
-        matriz1 = calculadora_matrizes(int(ad1),int(ad2),int(ad3),int(ad4))
+        # ad1,d2,d3,d4 = input("digite as dimensoes: ").split(" ") 
+        matriz1 = calculadora_matrizes(2,2,2,2)
         matriz1.criar_matriz()
         matriz1.multiplicar_matriz()
         char = input('''
