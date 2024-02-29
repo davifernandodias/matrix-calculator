@@ -23,7 +23,3 @@ for tamanho in range(len(matriz1)):
             
         ma.append(matriz_new)
     print(matriz_new)
-
-
-# [2,6,6,8],
-# [2,4,5,8]

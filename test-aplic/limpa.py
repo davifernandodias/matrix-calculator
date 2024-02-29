@@ -25,7 +25,8 @@ class calculadora_matrizes: # dimensoes
                 add=int(input("adiciona numero: "))
                 lista.append(add)
             self.matriz_one.append(lista)
-        print(f" primeira matriz: {self.matriz_one}")  
+        print("deu certo")
+         
         
 
         for i in range(self.n_linhas_dois): # segunda matriz
@@ -34,15 +35,27 @@ class calculadora_matrizes: # dimensoes
                 add_dois=int(input("adiciona numero: "))
                 lista_dois.append(add_dois)
             self.matriz_two.append(lista_dois)
-        print(f" segunda matriz: {self.matriz_two}") 
+        print("deu certo")
         
+    def somar_matriz(self):
+        matrizes_soma=[]
+        for tamanho in range(len(self.matriz_one)):
+            for valores1 in self.matriz_one:
+                for valores2 in self.matriz_two:
+                    lista_criada=[]
+                    for valores in range(2):
+                        new = valores1[valores] + valores2[valores]
+                        lista_criada.append(new)
+                matrizes_soma.append(lista_criada)
+                
+        print(matrizes_soma)
 
 
 
 matriz1 = calculadora_matrizes(2,2,2,2)
 matriz1.criar_matriz()
 
-
+matriz1.somar_matriz()
 
 
 
