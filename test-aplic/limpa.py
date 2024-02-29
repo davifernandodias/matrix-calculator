@@ -29,7 +29,7 @@ class calculadora_matrizes: # dimensoes
                 criado com sucesso''')
           
 
-          
+
     def somar_matriz(self):
         result=[]
         for i in range(len(self.matriz_one)):
@@ -75,9 +75,7 @@ while True:
         matriz1.somar_matriz()
         char = input('''
         
-        deseja fazer mais conta?: S/N
-        
-''')
+        deseja fazer mais conta?: S/N''')
         if char.lower() == "s":
             pass
         elif char.lower() == "n":
@@ -91,9 +89,7 @@ while True:
         matriz1.subtrair_matriz()
         char = input('''
         
-        deseja fazer mais conta?: S/N
-        
-''')
+        deseja fazer mais conta?: S/N''')
         if char.lower() == "s":
             pass
         elif char.lower() == "n":
@@ -107,9 +103,7 @@ while True:
         matriz1.multiplicar_matriz()
         char = input('''
         
-        deseja fazer mais conta?: S/N
-        
-''')
+        deseja fazer mais conta?: S/N''')
         if char.lower() == "s":
             pass
         elif char.lower() == "n":
@@ -118,6 +112,3 @@ while True:
     elif opcao == 3:
         print("VOCE SAIU DA CALCULADORA...BYEE")
         break
-
-
-
