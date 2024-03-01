@@ -13,8 +13,7 @@ class calculadora_matrizes: # PARAMETROS => LINHAS X COLUNAS
         for i in range(self.n_linhas): # primeira matriz
             lista =[]
             for j in range(self.n_colunas):
-                add=int(input("adiciona numero: "))
-                lista.append(add)
+                lista.append(int(input("adiciona numero: ")))
             self.matriz_one.append(lista)
         print('''
                 criado com sucesso''')
@@ -31,29 +30,73 @@ class calculadora_matrizes: # PARAMETROS => LINHAS X COLUNAS
 
 
     def somar_matriz(self):
-        result=[]
-        for i in range(len(self.matriz_one)):
-            result.append([])
-            for j in range(len(self.matriz_one[0])):
-                result[i].append(self.matriz_one[i][j] + self.matriz_two[i][j])
-        print(f"MATRIZ GERADA: {result}")
+        if self.n_colunas!=self.n_colunas_dois and self.n_linhas != self.n_linhas_dois:
+            print('Operação invalida,para soma-las devem ser de mesmo tamanho:')
+            while True:
+                print('''
+                      
+                      Deseja inserir a matriz novamente?:[s][n]
+                      
+                      ''')
+                r=input()
+                if r.lower()=='s':
+                    pass
+                else:
+                    break
+        else:        
+            result=[]
+            for i in range(len(self.matriz_one)):
+                result.append([])
+                for j in range(len(self.matriz_one[0])):
+                    result[i].append(self.matriz_one[i][j] + self.matriz_two[i][j])
+            for k in range(2):        
+                print(f"MATRIZ GERADA: {result[k]}")
+                #print(result[k])
 
     def subtrair_matriz(self):
-        result=[]
-        for i in range(len(self.matriz_one)):
-            result.append([])
-            for j in range(len(self.matriz_one[0])):
-                result[i].append(self.matriz_one[i][j] - self.matriz_two[i][j])
-        print(f"MATRIZ GERADA: {result}")
+        if self.n_colunas!=self.n_colunas_dois and self.n_linhas != self.n_linhas_dois:
+            print('Operação invalida,para soma-las devem ser de mesmo tamanho:')
+            while True:
+                print('''
+                      
+                      Deseja inserir a matriz novamente?:[s][n]
+                      
+                      ''')
+                r=input()
+                if r.lower()=='s':
+                    pass
+                else:
+                    break
+        else:        
+            result=[]
+            for i in range(len(self.matriz_one)):
+                result.append([])
+                for j in range(len(self.matriz_one[0])):
+                    result[i].append(self.matriz_one[i][j] - self.matriz_two[i][j])
+            print(f"MATRIZ GERADA: {result}")
 
     def multiplicar_matriz(self):
-        result=[]
-        for i in range(len(self.matriz_one)):
-            result.append([])
-            for j in range(len(self.matriz_one[0])):
-                result[i].append(self.matriz_one[i][j] * self.matriz_two[i][j])
-        print(f"MATRIZ GERADA: {result}")
-                
+        if self.n_colunas != self.n_colunas_dois:
+            print('Operação invalida,para soma-las devem ser de mesmo tamanho:')
+            while True:
+                print('''
+                      
+                      Deseja inserir a matriz novamente?:[s][n]
+                      
+                      ''')
+                r=input()
+                if r.lower()=='s':
+                    pass
+                else:
+                    break
+        else:            
+            result=[]
+            for i in range(len(self.matriz_one)):
+                result.append([])
+                for j in range(len(self.matriz_one[0])):
+                    result[i].append(self.matriz_one[i][j] * self.matriz_two[i][j])
+            print(f"MATRIZ GERADA: {result}")
+                    
 
 menu = '''                MATRIZES CAL
 
@@ -80,6 +123,9 @@ while True:                 # WHILE PARA DAR INICIO AO MENU E INICIAR COM SISTEM
             pass
         elif char.lower() == "n":
             break
+        else:
+            print('***  Digite uma opção valida  ***')
+            pass
 
     elif opcao == 2:                                         #SEGUNDA CONDIÇÃO SUBTRAÇÃO
         print(f"vc escolheu opção subtrair as matrizes")
@@ -94,6 +140,9 @@ while True:                 # WHILE PARA DAR INICIO AO MENU E INICIAR COM SISTEM
             pass
         elif char.lower() == "n":
             break  
+        else:
+            print('***  Digite uma opção valida  ***')
+            pass
 
     elif opcao == 3:                                            #TECERICA CONDIÇÃO MULTIPLICAÇÃO
         print(f"vc escolheu opção multiplicar as matrizes")
@@ -103,11 +152,14 @@ while True:                 # WHILE PARA DAR INICIO AO MENU E INICIAR COM SISTEM
         matriz1.multiplicar_matriz()
         char = input('''
         
-        deseja fazer mais conta?: S/N''')
+        deseja fazer mais conta?: S/N   ''')
         if char.lower() == "s":
             pass
         elif char.lower() == "n":
             break
+        else:
+            print('***  Digite uma opção valida  ***')
+            pass
 
     elif opcao == 3:                                        #QUARTA CONDIÇÃO SAIR
         print("VOCE SAIU DA CALCULADORA...BYEE")
