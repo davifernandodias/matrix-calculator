@@ -1,12 +1,7 @@
-array = [
-    [1,2,3,4],
-    [1,2,3,4]
-    ]
-    
-array2 = [
-    [1,2,3,4],
-    [1,2,3,4]
-    ]
-    
-for i in array:
-    
+import numpy as np
+
+A = np.array([[2,2],[2,2]])
+B = np.array([[2,2],[2,2]])
+
+repost = A.dot(B)
+print(repost)

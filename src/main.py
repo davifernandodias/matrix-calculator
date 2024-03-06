@@ -76,7 +76,7 @@ class calculadora_matrizes: # PARAMETROS => LINHAS X COLUNAS
             print(f"MATRIZ GERADA: {result}")
 
     def multiplicar_matriz(self):
-        if self.n_colunas == self.n_linhas_dois:
+        if self.n_colunas != self.n_linhas_dois:
             print('Operação invalida,para soma-las devem ser de mesmo tamanho:')
             while True:
                 print('''
@@ -91,10 +91,12 @@ class calculadora_matrizes: # PARAMETROS => LINHAS X COLUNAS
                     break
         else:            
             result=[]
-            for i in range(len(self.matriz_one)):
+            for i in range(self.n_linhas):
                 result.append([])
-                for j in range(len(self.matriz_one[0])):
-                    result[i].append(self.matriz_one[i][j] * self.matriz_two[i][j])
+                for j in range(self.n_colunas_dois):
+                    result[i].append(0)
+                    for k in range(self.n_colunas):
+                        result[i][j] += self.matriz_one[i][k] * self.matriz_two[k][j]
             print(f"MATRIZ GERADA: {result}")
                     
 
